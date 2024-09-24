@@ -3,29 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=54322d initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <!-- Tailwind CSS CDN with Custom Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        common_clr: '#B4F461',
-                        paragraph: '#111111B3',
-                    },
-                    fontFamily: {
-                        Lexend: ['Lexend', 'sans-serif'],
-                    },
-                },
-            },
-        }
-    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <style>
+        .font-Lexend {
+            font-family: "Lexend", system-ui;
+        }
+    </style>
 </head>
 
 <body class="font-Lexend">
@@ -40,18 +30,19 @@
         </div>
         <div class="navbar-end gap-3">
             <img src="./assets/coin.png" alt="" srcset="">
-            <p class="text-xl font-medium">5500 BDT</p>
+            <p class="text-xl font-medium"><span id="balance">5000</span> BDT</p>
         </div>
     </nav>
     <div class="w-5/6 mx-auto flex justify-center p-6 mt-12">
         <div class="flex space-x-4 mb-4">
-            <button class="bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl">Donation</button>
-            <button class="bg-white text-gray-500 border border-gray-300 
+            <button id="donation-btn"
+                class="bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl">Donation</button>
+            <button id="history-btn" class="bg-white text-gray-500 border border-gray-300 
             font-semibold text-xl px-8 py-4 rounded">History</button>
         </div>
     </div>
     <!-- cards design -->
-    <!-- Donation Cards -->
+    <!-- Donation Cards Section-->
     <div class="w-10/12 mx-auto space-y-20 mb-14">
         <!-- Card 1 -->
         <div class="card card-side bg-base-100 shadow-xl mt-5 w-10/12 mx-auto h-full">
@@ -62,27 +53,21 @@
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
-                        <p class="text-lg"><span>0</span> BDT</p>
+                        <p class="text-lg"><span class="donate-amount">0</span> BDT</p>
                     </div>
                     <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <p class="text-lg py-6 text-slate-600 leading-6 tracking-normal">
-                        The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your
-                        donation will help provide essential supplies and to those affected by this disaster. Every
-                        contribution, big or small, makes a difference. Please join us in supporting the relief efforts
-                        and
-                        making a
-                        positive impact on the lives of those in need.
+                        The recent floods in Noakhali have caused significant damage to homes and infrastructure...
                     </p>
                 </div>
-                <!-- Donation input field -->
                 <div>
-                    <input type="number" placeholder="Write Donation Amount"
-                        class="w-full border-2 border-gray-200 p-4 rounded mb-4 ">
+                    <input type="number" class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 "
+                        placeholder="Write Donation Amount">
                 </div>
-                <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button class="w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
-                        Now</button>
+                    <button class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">
+                        Donate Now
+                    </button>
                 </div>
             </div>
         </div>
@@ -95,7 +80,7 @@
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
-                        <p class="text-lg"><span>0</span> BDT</p>
+                        <p class="text-lg"><span class="donate-amount">0</span> BDT</p>
                     </div>
                     <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="text-lg py-6 text-slate-600 leading-6 tracking-normal">
@@ -112,11 +97,12 @@
                 <!-- Donation input field -->
                 <div>
                     <input type="number" placeholder="Write Donation Amount"
-                        class="w-full border-2 border-gray-200 p-4 rounded mb-4 ">
+                        class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 ">
                 </div>
                 <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button class="w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
+                    <button
+                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
                         Now</button>
                 </div>
             </div>
@@ -130,7 +116,7 @@
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
-                        <p class="text-lg"><span>0</span> BDT</p>
+                        <p class="text-lg"><span class="donate-amount">0</span> BDT</p>
                     </div>
                     <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                     <p class="text-lg py-6 text-slate-600 leading-6 tracking-normal">
@@ -148,15 +134,20 @@
                 <!-- Donation input field -->
                 <div>
                     <input type="number" placeholder="Write Donation Amount"
-                        class="w-full border-2 border-gray-200 p-4 rounded mb-4 ">
+                        class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 ">
                 </div>
                 <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button class="w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
+                    <button
+                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
                         Now</button>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- History Section -->
+    <div id="history-section" class=" hidden bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl">
+        <div id="history-list" class="grid grid-cols-1 gap-3"></div>
     </div>
     <script src="./js/donation.js"></script>
 </body>
