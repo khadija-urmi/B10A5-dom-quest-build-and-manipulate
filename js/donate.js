@@ -1,19 +1,6 @@
-function openModal() {
-    const modal = document.getElementById('modal_box');
-    if (modal) {
-        modal.showModal();  // Show the modal when called
-    } else {
-        console.error('Modal element not found');
-    }
-    const closeButton = document.getElementById("closeButton");
-    closeButton.addEventListener("click", function () {
-        window.location.href = "index.html";
-    });
-}
-function showErrorMessage(errorMsg, message) {
-    errorMsg.innerText = message;
-    errorMsg.style.display = "block"; // Show the error message
-}
+
+
+
 document.querySelectorAll(".donate-now").forEach(button => {
     button.addEventListener("click", function (event) {
 
@@ -100,3 +87,19 @@ donationButton.addEventListener('click', function () {
 })
 
 
+function openModal() {
+    const modal = document.getElementById('modal_box');
+    if (modal) {
+        modal.showModal();  // Show the modal when called
+    } else {
+        console.error('Modal element not found');
+    }
+    const closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", function () {
+        modal.close();
+    });
+}
+function showErrorMessage(errorMsg, message) {
+    errorMsg.innerText = message;
+    errorMsg.style.display = "block"; // Show the error message
+}

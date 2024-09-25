@@ -19,35 +19,33 @@
 
 <body class="font-Lexend text-gray-900">
     <!-- Navbar -->
-    <nav class="navbar w-10/12 mx-auto  py-4">
+    <nav class="navbar w-11/12 max-w-6xl mx-auto py-4">
         <div class="navbar-start">
             <button onclick="window.location.href='index.html'"
-                class="bg-lime-300 text-black px-7 py-3 rounded font-semibold text-xl">Home</button>
+                class="bg-lime-300 text-black px-5 py-2 rounded font-semibold text-lg sm:text-xl">Home</button>
         </div>
     </nav>
 
     <!-- Blog Content -->
-    <div class="container mx-auto w-10/12 mt-10">
-        <h1 class="text-4xl font-extrabold text-center mb-10">Frequently Asked Questions (FAQ)</h1>
+    <div class="container mx-auto w-11/12 max-w-6xl mt-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-center mb-8">Frequently Asked Questions (FAQ)</h1>
 
         <!-- Question 1 -->
         <div class="mb-6">
-            <h2 class="text-2xl font-semibold mb-3">1. What is the Document Object Model (DOM)?</h2>
-            <p class="text-lg">
-                The Document Object Model (DOM) is a programmatic interface for web content. It represents the page,
-                allowing
-                applications to modify the document's content, appearance, and organization. The DOM is a tree-like
-                structure where
-                elements, attributes, and text are represented as objects that can be customized and updated using
-                scripting languages
-                like JavaScript.
+            <h2 class="text-xl sm:text-2xl font-semibold mb-2">1. What is the Document Object Model (DOM)?</h2>
+            <p class="text-base sm:text-lg">
+                The Document Object Model (DOM) is a programmatic interface for web content. It represents the page,
+                allowing applications to modify the document's content, appearance, and organization. The DOM is a
+                tree-like structure where elements, attributes, and text are represented as objects that can be
+                customized
+                and updated using scripting languages like JavaScript.
             </p>
         </div>
 
         <!-- Question 2 -->
         <div class="mb-6">
-            <h2 class="text-2xl font-semibold mb-3">2. How do you select an element from the DOM?</h2>
-            <p class="text-lg">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-2">2. How do you select an element from the DOM?</h2>
+            <p class="text-base sm:text-lg">
                 You can select elements from the DOM using several methods provided by JavaScript:
             </p>
             <ul class="list-disc list-inside ml-4">
@@ -68,26 +66,27 @@
 
         <!-- Question 3 -->
         <div class="mb-6">
-            <h2 class="text-2xl font-semibold mb-3">3. What is event delegation in the context of the DOM, and why is it
-                useful?</h2>
-            <p class="text-lg">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-2">3. What is event delegation in the context of the DOM,
+                and
+                why is it useful?</h2>
+            <p class="text-base sm:text-lg">
                 JavaScript's event delegation technique allows you to add a single event listener to a parent element
-                rather than
-                several listeners to each of the child elements individually. Thanks to event bubbling (the event
-                propagates up the DOM
-                tree), the event listener is triggered if any of the child nodes matching a specified selector are
-                clicked. When adding
-                elements dynamically or wanting to manage event listeners more effectively, event delegation comes in
-                convenient. It
-                increases performance by lowering the quantity of event listeners that are connected to the DOM.
+                rather
+                than several listeners to each of the child elements individually. Thanks to event bubbling (the event
+                propagates up the DOM tree), the event listener is triggered if any of the child nodes matching a
+                specified
+                selector are clicked. When adding elements dynamically or wanting to manage event listeners more
+                effectively, event delegation comes in convenient. It increases performance by lowering the quantity of
+                event listeners that are connected to the DOM.
             </p>
         </div>
 
         <!-- Question 4 -->
         <div class="mb-6">
-            <h2 class="text-2xl font-semibold mb-3">4. How do you manipulate an element's attributes and styles using
-                the DOM?</h2>
-            <p class="text-lg">
+            <h2 class="text-xl sm:text-2xl font-semibold mb-2">4. How do you manipulate an element's attributes and
+                styles
+                using the DOM?</h2>
+            <p class="text-base sm:text-lg">
                 You can manipulate an element's attributes and styles using various DOM methods. Here are some common
                 ways:
             </p>

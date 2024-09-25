@@ -19,37 +19,41 @@
 
 <body class="font-Lexend">
     <!-- Navbar  -->
-    <nav class="navbar w-10/12 mx-auto fixed top-0 left-0 right-0 z-50 bg-base-100">
+    <nav class="navbar w-2/3  mx-2 lg:w-10/12 lg:mx-auto fixed top-0 left-0 right-0 z-50 bg-base-100">
         <div class="navbar-start">
-            <button onclick="window.location.href='blog.html'"
-                class="bg-lime-300 text-black px-7 py-3 rounded font-semibold text-xl">Blog</button>
+            <button onclick="window.location.href='blog.html'" class="bg-lime-300 text-black px-3 py-1 
+                lg:px-7 lg:py-3 rounded\ font-semibold text-xl">Blog</button>
         </div>
-        <div class="navbar-center flex justify-between gap-4">
+        <div class="navbar-center flex justify-between gap-2 lg:gap-4">
             <img src="./assets/logo.png" alt="" srcset="">
-            <h2 class="font-extrabold text-3xl">Donate Bangladesh</h2>
+            <h2 class="font-extrabold text-lg lg:text-3xl">Donate Bangladesh</h2>
         </div>
         <div class="navbar-end gap-3">
             <img src="./assets/coin.png" alt="" srcset="">
-            <p class="text-xl font-medium"><span id="balance">5000</span> BDT</p>
+            <p class="text-lg lg:text-xl font-medium"><span id="balance">5000</span> BDT</p>
         </div>
     </nav>
-    <div class="w-5/6 mx-auto flex justify-center p-6 mt-24">
-        <div class="flex space-x-4 mb-4">
-            <button id="donation-btn"
-                class="bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl">Donation</button>
-            <button id="history-btn" class="bg-white text-gray-500 border border-gray-300 
-            font-semibold text-xl px-8 py-4 rounded">History</button>
-        </div>
+
+    <!-- Buttons Section -->
+    <div class="w-5/6 mx-auto flex justify-center p-6 mt-24 space-x-2 sm:space-x-4">
+        <button id="donation-btn"
+            class="bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl w-full sm:w-auto">
+            Donation
+        </button>
+        <button id="history-btn"
+            class="bg-white text-gray-500 border border-gray-300 font-semibold text-xl px-8 py-4 rounded w-full sm:w-auto">
+            History
+        </button>
     </div>
-    <!-- cards design -->
+
     <!-- Donation Cards Section-->
-    <div id="donation-section" class="w-10/12 mx-auto space-y-20 mb-14">
+    <div id="donation-section" class="w-full px-4 sm:px-10 mx-auto space-y-20 mb-14">
         <!-- Card 1 -->
-        <div class="card card-side bg-base-100 shadow-xl mt-5 w-10/12 mx-auto h-full">
-            <figure class="w-1/2 flex items-stretch">
-                <img src="./assets/noakhali.png" alt="Flood at Noakhali" class="w-full object-cover h-full" />
+        <div class="card card-side bg-base-100 shadow-xl mt-5 flex flex-col md:flex-row w-10/12 mx-auto">
+            <figure class="w-full md:w-1/2 flex items-stretch">
+                <img src="./assets/noakhali.png" class="w-full object-cover h-full" />
             </figure>
-            <div class="card-body w-1/2 flex flex-col justify-between">
+            <div class="card-body w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
@@ -73,12 +77,13 @@
                 <div id="error-msg" style="display: none; color: red;"></div>
             </div>
         </div>
+
         <!-- Card 2 -->
-        <div class="card card-side bg-base-100 shadow-xl mt-5 w-10/12 mx-auto h-full">
-            <figure class="w-1/2 flex items-stretch">
-                <img src="./assets/feni.png" alt="Flood at Feni" class="w-full object-cover h-full" />
+        <div class="card card-side bg-base-100 shadow-xl mt-5 flex flex-col md:flex-row w-10/12 mx-auto">
+            <figure class="w-full md:w-1/2 flex items-stretch">
+                <img src="./assets/feni.png" class="w-full object-cover h-full" />
             </figure>
-            <div class="card-body w-1/2 flex flex-col justify-between">
+            <div class="card-body w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
@@ -96,26 +101,25 @@
                         those in urgent need.
                     </p>
                 </div>
-                <!-- Donation input field -->
                 <div>
-                    <input type="number" placeholder="Write Donation Amount"
-                        class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 ">
+                    <input type="number" class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 "
+                        placeholder="Write Donation Amount">
                 </div>
-                <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button disabled onclick="openModal()"
-                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
-                        Now</button>
+                    <button onclick="openModal()"
+                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">
+                        Donate Now
+                    </button>
                 </div>
                 <div id="error-msg" style="display: none; color: red;"></div>
             </div>
         </div>
-        <!-- Card 3 -->
-        <div class="card card-side bg-base-100 shadow-xl mt-5 w-10/12 mx-auto h-full ">
-            <figure class="w-1/2 flex items-stretch">
-                <img src="./assets/quota-protest.png" alt="Flood at Noakhali" class="w-full object-cover h-full" />
+        <!-- Card 3  -->
+        <div class="card card-side bg-base-100 shadow-xl mt-5 flex flex-col md:flex-row w-10/12 mx-auto">
+            <figure class="w-full md:w-1/2 flex items-stretch">
+                <img src="./assets/quota-protest.png" class="w-full object-cover h-full" />
             </figure>
-            <div class="card-body w-1/2 flex flex-col justify-between">
+            <div class="card-body w-full md:w-1/2 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-start items-center gap-3 mb-4">
                         <img src="./assets/coin.png" alt="Coin" class="w-6 h-6" />
@@ -134,40 +138,39 @@
                         donation to support these brave individuals in their time of need.
                     </p>
                 </div>
-                <!-- Donation input field -->
                 <div>
-                    <input type="number" placeholder="Write Donation Amount"
-                        class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 ">
+                    <input type="number" class="donate-input w-full border-2 border-gray-200 p-4 rounded mb-4 "
+                        placeholder="Write Donation Amount">
                 </div>
-                <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button disabled onclick="openModal()"
-                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
-                        Now</button>
+                    <button onclick="openModal()"
+                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">
+                        Donate Now
+                    </button>
                 </div>
-                <!-- error msg -->
                 <div id="error-msg" style="display: none; color: red;"></div>
             </div>
         </div>
     </div>
+
     <!-- History Section -->
     <div id="history-section">
-        <div id="history-list" class="grid grid-cols-1  py-10 max-w-5xl mx-auto space-y-4"></div>
+        <div id="history-list" class="grid grid-cols-1 py-10 max-w-5xl mx-auto space-y-4"></div>
     </div>
+
     <!-- Modal design -->
     <dialog id="modal_box" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box px-4 py-2 md:w-2/3 lg: w-9/12 max-w-3xl text-center space-y-2">
+        <div class="modal-box px-4 py-2 md:w-2/3 lg:w-9/12 max-w-3xl text-center space-y-2">
             <img class="mx-auto block w-40" src="./assets/donateLuv.jpg">
             <div class="modal-box-content">
                 <h3 class="font-bold text-5xl">Congrats!</h3>
                 <img class="mx-auto mt-4 " src="./assets/coin.png">
                 <p class="py-4">You have donated for Humankind</p>
                 <p class="text-2xl font-semibold mb-3">Successfully</p>
-                <button id="closeButton" class="bg-lime-400 text-white font-semibold rounded-lg w-48 px-4 py-4"> Close
-                    Confirmation
+                <button id="closeButton" class="bg-lime-400 text-white font-semibold rounded-lg w-48 px-4 py-4">
+                    Close Confirmation
                 </button>
             </div>
-        </div>
         </div>
     </dialog>
 
