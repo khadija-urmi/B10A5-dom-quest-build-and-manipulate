@@ -44,6 +44,21 @@ document.querySelectorAll(".donate-now").forEach(button => {
         const totalDonation = currentDonation + donateAmountInput;
         currentDonateElement.innerText = totalDonation.toFixed(2);
         currentBalanceElement.innerText = remainingBalance.toFixed(2);
+
+        //adding  history list 
+        const historyItem = document.createElement("div");
+        historyItem.className = "bg-green-200 p-8 rounded-md border border-gray-200 shadow-md space-y-2";
+        const newDate = new Date().toLocaleDateString();
+        const donationName = card.querySelector(".donation-title").innerText;
+
+        historyItem.innerHTML = `
+        <h2 class="text-2xl font-semibold">${donateAmountInput.toLocaleString()} Taka is Donated at  ${donationName}</h2>
+        <p class="text-lg text-gray-500">Date: ${newDate} (Bangladesh Standard Time)</p>
+    `;
+        const historyContainer = document.getElementById("history-list");
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+        document.getElementById("history-section").classList.add("hidden");
+
     })
 })
 //donation-btn & history-btn functionality active status
