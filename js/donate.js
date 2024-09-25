@@ -47,23 +47,29 @@ document.querySelectorAll(".donate-now").forEach(button => {
     })
 })
 //donation-btn & history-btn functionality active status
-function toggleButtonStatus(activeButton, inactiveButton) {
+function toggleButtonStatus(activeButton, inactiveButton, activeSection, inactiveSection) {
 
     activeButton.classList.add("bg-lime-300", "text-black");
     activeButton.classList.remove("bg-white", "text-gray-500");
 
     inactiveButton.classList.add("bg-white", "text-gray-500");
     inactiveButton.classList.remove("bg-lime-300", "text-black");
+
+    activeSection.classList.remove("hidden");
+    inactiveSection.classList.add("hidden");
 }
 
 const donationButton = document.getElementById("donation-btn");
 const historyButton = document.getElementById("history-btn");
 
+const donationSection = document.getElementById("donation-section");
+const historySection = document.getElementById("history-section");
+
 historyButton.addEventListener('click', function () {
-    toggleButtonStatus(historyButton, donationButton);
+    toggleButtonStatus(historyButton, donationButton, historySection, donationSection);
 })
 
 donationButton.addEventListener('click', function () {
-    toggleButtonStatus(donationButton, historyButton);
+    toggleButtonStatus(donationButton, historyButton, donationSection, historySection);
 })
 
