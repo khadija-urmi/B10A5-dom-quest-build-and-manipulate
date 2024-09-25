@@ -1,13 +1,15 @@
-//modal box code
 function openModal() {
     const modal = document.getElementById('modal_box');
-    modal.showModal();
+    if (modal) {
+        modal.showModal();  // Show the modal when called
+    } else {
+        console.error('Modal element not found');
+    }
+    const closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
 }
-const closeButton = document.getElementById("closeButton");
-goHomeButton.addEventListener("click", function () {
-    window.location.href = "index.html";
-});
-
 function showErrorMessage(errorMsg, message) {
     errorMsg.innerText = message;
     errorMsg.style.display = "block"; // Show the error message
@@ -30,8 +32,8 @@ document.querySelectorAll(".donate-now").forEach(button => {
         const donateAmountInputValue = card.querySelector(".donate-input").value;
 
         const donateAmountInput = parseFloat(donateAmountInputValue);
-        if (donateAmountInputValue === "") {
-            showErrorMessage(errorMsgDiv, "⚠️ Donation amount must be filled out");
+        if (donateAmountInputValue === "" || donateAmountInput <= 0 || isNaN(donateAmountInput)) {
+            showErrorMessage(errorMsgDiv, "⚠️ Please enter a valid donation amount");
             return;
         }
 
@@ -42,11 +44,8 @@ document.querySelectorAll(".donate-now").forEach(button => {
 
 
         //input validation
-        if (donateAmountInput <= 0 || isNaN(donateAmountInput)) {
-            showErrorMessage(errorMsgDiv, "⚠️ Please enter a valid donation amount");
-            return;
-        }
-        else if (donateAmountInput > currentBalance || remainingBalance < 0) {
+
+        if (donateAmountInput > currentBalance || remainingBalance < 0) {
             showErrorMessage(errorMsgDiv, "⚠️ Donation amount exceeds the current balance.");
             return;
         }
@@ -68,9 +67,11 @@ document.querySelectorAll(".donate-now").forEach(button => {
         const historyContainer = document.getElementById("history-list");
         historyContainer.insertBefore(historyItem, historyContainer.firstChild);
         document.getElementById("history-section").classList.add("hidden");
+        openModal();
 
     })
 })
+
 //donation-btn & history-btn functionality active status
 function toggleButtonStatus(activeButton, inactiveButton, activeSection, inactiveSection) {
 
@@ -97,4 +98,5 @@ historyButton.addEventListener('click', function () {
 donationButton.addEventListener('click', function () {
     toggleButtonStatus(donationButton, historyButton, donationSection, historySection);
 })
+
 

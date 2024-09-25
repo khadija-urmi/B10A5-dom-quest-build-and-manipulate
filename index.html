@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Donation Bangladesh</title>
     <style>
         .font-Lexend {
             font-family: "Lexend", system-ui;
@@ -20,9 +19,10 @@
 
 <body class="font-Lexend">
     <!-- Navbar  -->
-    <nav class="navbar w-10/12 mx-auto bg-base-100">
+    <nav class="navbar w-10/12 mx-auto fixed top-0 left-0 right-0 z-50 bg-base-100">
         <div class="navbar-start">
-            <button class="bg-lime-300 text-black px-7 py-3 rounded font-semibold text-xl">Blog</button>
+            <button onclick="window.location.href='blog.html'"
+                class="bg-lime-300 text-black px-7 py-3 rounded font-semibold text-xl">Blog</button>
         </div>
         <div class="navbar-center flex justify-between gap-4">
             <img src="./assets/logo.png" alt="" srcset="">
@@ -33,7 +33,7 @@
             <p class="text-xl font-medium"><span id="balance">5000</span> BDT</p>
         </div>
     </nav>
-    <div class="w-5/6 mx-auto flex justify-center p-6 mt-12">
+    <div class="w-5/6 mx-auto flex justify-center p-6 mt-24">
         <div class="flex space-x-4 mb-4">
             <button id="donation-btn"
                 class="bg-lime-300 text-black px-8 py-4 rounded font-semibold text-xl">Donation</button>
@@ -157,9 +157,9 @@
     <!-- Modal design -->
     <dialog id="modal_box" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box px-4 py-2 md:w-2/3 lg: w-9/12 max-w-3xl text-center space-y-2">
-            <img class="mx-auto block w-32" src="./assets/humanLuv.jpg">
+            <img class="mx-auto block w-40" src="./assets/donateLuv.jpg">
             <div class="modal-box-content">
-                <h3 class="font-bold text-5xl">Cognates!</h3>
+                <h3 class="font-bold text-5xl">Congrats!</h3>
                 <img class="mx-auto mt-4 " src="./assets/coin.png">
                 <p class="py-4">You have donated for Humankind</p>
                 <p class="text-2xl font-semibold mb-3">Successfully</p>
