@@ -65,7 +65,8 @@
                         placeholder="Write Donation Amount">
                 </div>
                 <div class="card-actions justify-end mt-auto">
-                    <button class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">
+                    <button onclick="openModal()"
+                        class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">
                         Donate Now
                     </button>
                 </div>
@@ -102,7 +103,7 @@
                 </div>
                 <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button
+                    <button disabled onclick="openModal()"
                         class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
                         Now</button>
                 </div>
@@ -140,7 +141,7 @@
                 </div>
                 <!-- Donation button -->
                 <div class="card-actions justify-end mt-auto">
-                    <button
+                    <button disabled onclick="openModal()"
                         class="donate-now w-full bg-lime-300 px-8 py-4 text-xl font-semibold text-center rounded">Donate
                         Now</button>
                 </div>
@@ -153,6 +154,22 @@
     <div id="history-section">
         <div id="history-list" class="grid grid-cols-1  py-10 max-w-5xl mx-auto space-y-4"></div>
     </div>
+    <!-- Modal design -->
+    <dialog id="modal_box" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box px-4 py-2 md:w-2/3 lg: w-9/12 max-w-3xl text-center space-y-2">
+            <img class="mx-auto block w-32" src="./assets/humanLuv.jpg">
+            <div class="modal-box-content">
+                <h3 class="font-bold text-5xl">Cognates!</h3>
+                <img class="mx-auto mt-4 " src="./assets/coin.png">
+                <p class="py-4">You have donated for Humankind</p>
+                <p class="text-2xl font-semibold mb-3">Successfully</p>
+                <button id="closeButton" class="bg-lime-400 text-white font-semibold rounded-lg w-48 px-4 py-4"> Close
+                    Confirmation
+                </button>
+            </div>
+        </div>
+        </div>
+    </dialog>
 
     <script src="./js/donate.js"></script>
 </body>

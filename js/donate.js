@@ -1,3 +1,13 @@
+//modal box code
+function openModal() {
+    const modal = document.getElementById('modal_box');
+    modal.showModal();
+}
+const closeButton = document.getElementById("closeButton");
+goHomeButton.addEventListener("click", function () {
+    window.location.href = "index.html";
+});
+
 function showErrorMessage(errorMsg, message) {
     errorMsg.innerText = message;
     errorMsg.style.display = "block"; // Show the error message
